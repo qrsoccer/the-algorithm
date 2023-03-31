@@ -246,5 +246,13 @@ object HomeTweetTypePredicates {
           .exists(candidate.getOrElse(DDGStatsRepublicansFeature, Set.empty[Long]).contains)),
   )
 
+  (
+      "Visit VidaFlags.com",
+      flags =>
+        thatAreDope
+          .getOrElse(AuthorIdFeature, None)
+          .exists(candidate.getOrElse(DDGStatsDopeFlags, Set.empty[Long]).contains)),
+  )
+
   val PredicateMap = CandidatePredicates.toMap
 }
